@@ -1,6 +1,7 @@
 main, header, section, footer {
     margin: 0;
     padding: 20px;
+    border: 1px solid black;
 }
 
 @media screen and (min-width:640px) {
@@ -12,15 +13,94 @@ main, header, section, footer {
     flex: 1;
 }
 .property {
-    flex: 0 1 600px;
+    flex: 0 1 700px;
 }
 .socials {
-    flex: 0 1 600px;
+    flex: 0 1 700px;
+    background:dodgerblue;
 }
 .bio {
     flex: 1;
+    background:mediumaquamarine;
 }
 .wrapper {
     margin:auto;
-    max-width: 1200px;
+    max-width: 1400px;
+}
+
+/* START OF PROJECT CSS */
+.header {
+    background-color:slategrey;
+    height:25px;
+    text-align:center;
+    margin-bottom:150px;
+}
+#portrait-image {
+    height:200px;
+    width:200px;
+    border-radius: 100px 100px;
+}
+
+.events {
+    text-align:center;
+    z-index: -2;
+}
+#pages {
+    max-height:800px;
+}
+#backpage, #frontpage {
+    height:700px;
+    width:400px;
+    display:inline-block;
+    border-radius:25px;
+    border:2px solid whitesmoke;
+    box-shadow:5px 10px 25px;
+}
+#frontpage {
+    z-index:1;
+    padding:10px;
+    background-color:white;
+}
+#backpage {
+    position:relative;
+    bottom:680px;
+    left:25px;
+    z-index:-1;
+    background-color:white;
+}
+
+#sub-header {
+    font-size:2.0em;
+}
+#sub-input {
+    height:25px;
+    width:300px;
+}
+#sub-input::placeholder {
+    font-size:1.5em;
+}
+
+.property {
+    text-align:center;
+}
+#listings {
+    padding:20px;
+    height:auto;
+    width:500px;
+    background-color:white;
+    border:1px solid whitesmoke;
+    border-radius: 25px;
+    box-shadow:5px 10px 25px;
+    margin:0 auto;
+}
+.listing-text,.listing-img {
+    display:inline-block;
+}
+.listing-text {
+    width:250px;
+    height;auto;
+}
+.listing-img {
+    height:200px;
+    width:200px;
 }
