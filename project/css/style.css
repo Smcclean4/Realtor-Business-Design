@@ -1,7 +1,29 @@
-main, header, section, footer {
+header, section, footer {
     margin: 0;
     padding: 20px;
-    border: 1px solid black;
+}
+section {
+    margin-bottom:5%;
+}
+form {
+    background-color:rgb(13, 13, 77, 0.9);
+    color:white;
+    padding:20px 0 50px 0;
+    border-radius:50px 50px 50px 10px;
+}
+
+#background-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height:1880px;
+    min-height:1750px;
+    max-height:2000px;
+    width:auto;
+    max-width:1900px;
+    position:absolute;
+    opacity:0.2;
+    z-index:-100000;
 }
 
 @media screen and (min-width:640px) {
@@ -13,24 +35,22 @@ main, header, section, footer {
     flex: 1;
 }
 .property {
-    flex: 0 1 700px;
+    flex: 0 1 900px;
 }
 .socials {
-    flex: 0 1 700px;
-    background:dodgerblue;
+    flex: 0 1 800px;
 }
 .bio {
     flex: 1;
-    background:mediumaquamarine;
 }
 .wrapper {
     margin:auto;
-    max-width: 1400px;
+    max-width: 1700px;
 }
 
 /* START OF PROJECT CSS */
 .header {
-    background-color:slategrey;
+    background-color:rgb(13, 13, 77);
     height:25px;
     text-align:center;
     margin-bottom:150px;
@@ -43,16 +63,17 @@ main, header, section, footer {
 
 .events {
     text-align:center;
-    z-index: -2;
+    z-index: 100000;
 }
 #pages {
     max-height:800px;
+    margin-bottom:50px;
 }
 #backpage, #frontpage {
-    height:700px;
+    height:600px;
     width:400px;
     display:inline-block;
-    border-radius:25px;
+    border-radius:0 0 25px 25px;
     border:2px solid whitesmoke;
     box-shadow:5px 10px 25px;
 }
@@ -60,14 +81,33 @@ main, header, section, footer {
     z-index:1;
     padding:10px;
     background-color:white;
+    border:10px solid rgb(13, 13, 77);
 }
 #backpage {
     position:relative;
-    bottom:680px;
+    bottom:600px;
     left:25px;
     z-index:-1;
     background-color:white;
+    border:10px solid rgb(13, 13, 77);
 }
+#dummy {
+    color:white;
+    padding:20px;
+    margin-top:-50px;
+    background-color:rgb(13, 13, 77);
+    border-radius:20px 20px 0 0;
+    width:370px;
+}
+.main-header1 {
+    color:white;
+    padding:20px;
+    margin:0 auto;
+    background-color:rgb(13, 13, 77);
+    border-radius:20px 20px 0 0;
+    width:400px;
+}
+
 
 #sub-header {
     font-size:2.0em;
@@ -89,18 +129,103 @@ main, header, section, footer {
     width:500px;
     background-color:white;
     border:1px solid whitesmoke;
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     box-shadow:5px 10px 25px;
     margin:0 auto;
+    border:10px solid rgb(13, 13, 77);
+}
+.main-header2 {
+    color:white;
+    padding:20px;
+    margin:0 auto;
+    background-color:rgb(13, 13, 77);
+    border-radius:20px 20px 0 0;
+    width:520px;
 }
 .listing-text,.listing-img {
     display:inline-block;
 }
 .listing-text {
     width:250px;
-    height;auto;
+    height:auto;
 }
 .listing-img {
     height:200px;
     width:200px;
+}
+
+
+.socials {
+    text-align:center;
+}
+.icons {
+    padding:15px;
+    border-radius:100px 50px;
+    display:inline-block;
+    background-color:white;
+    border:5px solid whitesmoke;
+    margin-right:20px;
+}
+#facebook, #twitter, #instagram, #linkedin {
+    font-size:2.8em;
+}
+#facebook {
+    color:dodgerblue;
+}
+#twitter {
+    color:skyblue;
+}
+.fa-instagram {
+    font-weight: bold;
+    background:linear-gradient(to bottom right,purple,orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#linkedin {
+    color:blue;
+}
+
+#bio-text {
+    width:300px;
+    margin-right:50px;
+    word-wrap: break-word;
+    font-size:1.2em;
+    vertical-align: middle;
+}
+#portrait-img2 {
+    height:200px;
+    width:200px;
+    border-radius: 100px 100px;
+    vertical-align:middle;
+}
+#bio-text, #portrait-img2 {
+    display:inline-block;
+}
+
+.footer {
+    background-color:rgb(13, 13, 77);
+}
+
+#bottom-border {
+    margin-top:75px;
+}
+#top-border {
+    border-bottom: 2px solid gray;
+}
+
+#sub-input {
+    border-radius:10px 10px 10px 0;
+    height:35px;
+    font-size:1.2rem;
+}
+#sub-button {
+    color:white;
+    background-color:rgb(13, 13, 77);
+    padding:10px;
+    font-size:15.8px;
+    border-radius:10px;
+}
+#sub-button:hover {
+    cursor: pointer;
 }
