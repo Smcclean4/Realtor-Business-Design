@@ -60,8 +60,9 @@ form {
 }
 #portrait-image {
     height:200px;
-    width:200px;
+    width:180px;
     border-radius: 100px 100px;
+    border:6px solid rgb(13, 13, 77);
 }
 
 .events {
@@ -205,9 +206,8 @@ form {
     vertical-align: middle;
 }
 #portrait-img2 {
-    height:200px;
-    width:200px;
-    border-radius: 100px 100px;
+    height:100px;
+    width:300px;
     vertical-align:middle;
 }
 #bio-text, #portrait-img2 {
@@ -239,4 +239,17 @@ form {
 }
 #sub-button:hover {
     cursor: pointer;
+}
+#top-btn {
+    position:fixed;
+    padding:10px 15px;
+    font-size:1.8em;
+    border-radius:100px 100px;
+    background-color:rgb(13, 13, 77);
+    color:white;
+    margin-left:800px;
+    border:1px solid grey;
+}
+#top-btn:hover {
+    cursor:pointer;
 }
