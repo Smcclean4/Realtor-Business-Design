@@ -24,11 +24,11 @@ form {
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
-    height:1950px;
-    min-height:1750px;
-    max-height:2000px;
+    min-height:100%;
+    height:1960px;
+    max-height:2500px;
     width:100%;
-    max-width:1900px;
+    max-width:auto;
     position:absolute;
     opacity:0.2;
     z-index:-100000;
