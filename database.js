@@ -1,16 +1,29 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost/CarlosGamboa';
 // using express to display info from MongoDB
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
-    MongoClient.connect( url , function (err, client) {
-        var db = client.db('CarlosGamboa');
-        var cursor = db.collection('myCollection').find();
-        var collection = db.collection('myCollection');
-    
-       cursor.each((err, items) => {
-           console.log(items);
-       });
-    });
+app.use(bodyParser.urlencoded({extended: true}));
 
+ app.get('/', (req, res) => {
+     res.sendFile(__dirname + '/project/');
+ });
+
+ MongoClient.connect("mongodb+srv://slm:onbasedgod1@cgdb-egygy.mongodb.net/CarlosGamboa", {useNewUrlParser: true} , function (err, client) {
+    var db = client.db('CarlosGamboa');
+    var cursor = db.collection('myCollection').find();
+    var collection = db.collection('myCollection');
+
+   cursor.forEach((err, items) => {
+       if (err) {
+           return console.log(err);
+       }
+
+       db = database
+
+       app.listen(3000, () => {
+           console.log('listening on 3000');
+       })
+   });
+});

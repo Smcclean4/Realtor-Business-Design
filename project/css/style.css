@@ -8,7 +8,7 @@ header, section, footer {
 section {
     margin-bottom:5%;
 }
-form {
+#sub {
     background-color:rgb(13, 13, 77, 0.9);
     color:white;
     padding:20px 0 50px 0;
