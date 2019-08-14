@@ -6,6 +6,10 @@ var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.listen(3002, () => {
+    console.log('listening on 3002');
+})
+
  app.get('/', (req, res) => {
      res.sendFile(__dirname + '/project/');
  });
@@ -20,10 +24,5 @@ app.use(bodyParser.urlencoded({extended: true}));
            return console.log(err);
        }
 
-       db = database
-
-       app.listen(3000, () => {
-           console.log('listening on 3000');
-       })
    });
 });
