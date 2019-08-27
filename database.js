@@ -6,23 +6,27 @@ var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.listen(3002, () => {
-    console.log('listening on 3002');
-})
-
- app.get('/', (req, res) => {
-     res.sendFile(__dirname + '/project/');
- });
+app.get('/', (req, res) => {
+    res.send(__dirname + '/project/');
+});  
 
  MongoClient.connect("mongodb+srv://slm:onbasedgod1@cgdb-egygy.mongodb.net/CarlosGamboa", {useNewUrlParser: true} , function (err, client) {
     var db = client.db('CarlosGamboa');
-    var cursor = db.collection('myCollection').find();
-    var collection = db.collection('myCollection');
+    var cursor = db.collection('EventInformation').find();
+    var collection = db.collection('EventInformation'); 
+    var port = 3002;
+
+    app.listen(port, () => {
+        console.log("listening on " + port + "");
+    })
 
    cursor.forEach((err, items) => {
+        if (!err) {
+            return console.log(items);
+        }
+
        if (err) {
            return console.log(err);
        }
-
    });
 });
