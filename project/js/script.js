@@ -30,7 +30,7 @@ function init() {
             backGround.style.opacity = 0.2;
         }, 50);
     
-    }, 4000);
+    }, 1000);
 }
 
 init();
