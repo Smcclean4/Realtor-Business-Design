@@ -23,30 +23,16 @@ section {
 }
 
 main {
+    width:100%;
     position:absolute;
     z-index:-1;
     background-color:rgb(150, 184, 243);
 }
 
-@media screen and (min-width:640px) {
-    .flex-container {
-        display:flex;
-    }
-}
-.events {
-    flex: 1;
-}
-.property {
-    flex: 0 1 900px;
-}
-.socials {
-    flex: 0 1 800px;
-}
-.bio {
-    flex: 1;
-}
-.wrapper {
-    margin:auto;
+.flex-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 /* START OF PROJECT CSS */
@@ -75,7 +61,7 @@ main {
 }
 #backpage, #frontpage {
     height:600px;
-    width:400px;
+    width:450px;
     display:inline-block;
     border-radius:0 0 25px 25px;
     border:2px solid whitesmoke;
@@ -101,7 +87,7 @@ main {
     margin-top:-50px;
     background-color:rgb(13, 13, 77);
     border-radius:20px 20px 0 0;
-    width:370px;
+    width:400px;
 }
 .main-header1 {
     color:white;
@@ -109,13 +95,14 @@ main {
     margin:0 auto;
     background-color:rgb(13, 13, 77);
     border-radius:20px 20px 0 0;
-    width:400px;
+    width:450px;
     font-size:1.89em;
 }
 
 
 #sub-header {
     font-size:1.8em;
+    padding:20px;
 }
 #sub-input {
     height:25px;
@@ -150,16 +137,16 @@ main {
 }
 .listing-text,.listing-img {
     display:inline-block;
+    margin:10px;
 }
 .listing-text {
     width:250px;
     height:auto;
-}
-.listing-text {
-    font-size:0.9rem;
+    font-size:22px;
 }
 .event-text {
-    font-size:0.87em;
+    font-size:25px;
+    margin:10px;
 }
 .listing-img {
     height:200px;
@@ -202,7 +189,7 @@ main {
     width:300px;
     margin-right:50px;
     word-wrap: break-word;
-    font-size:1.2em;
+    font-size:25px;
     vertical-align: middle;
 }
 #portrait-img2 {
@@ -248,7 +235,8 @@ main {
     background-color:rgb(13, 13, 77);
     color:white;
     border:1px solid grey;
-    justify-self: right;
+    right:100px;
+    top:100px;
 }
 #top-btn:hover {
     cursor:pointer;
