@@ -43,7 +43,7 @@ function mini() {
 }
 // minifying images
 function images () {
-  return gulp.src('project/images/**/*.+(png | jpg | gif | svg)')
+  return gulp.src('./images/**/*.+(png | jpg | gif | svg)')
     .pipe(cache(imagemin({
       interlaced: true
     })))
