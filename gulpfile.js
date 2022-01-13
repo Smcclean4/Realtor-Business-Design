@@ -1,8 +1,8 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
-const cssnano = require('gulp-cssnano');
+const cssnano = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-const uglify = require('gulp-uglify');
+const terse = require('gulp-terser');
 const gulpIf = require('gulp-if');
 const useref = require('gulp-useref');
 const cache = require('gulp-cache');
@@ -37,13 +37,13 @@ function clean() {
 function mini() {
   return  gulp.src('project/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.js', terse()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 }
 // minifying images
 function images () {
-  return gulp.src('./images/**/*.+(png | jpg | gif | svg)')
+  return gulp.src('project/images/**/*.+(png | jpg | gif | svg)')
     .pipe(cache(imagemin({
       interlaced: true
     })))
