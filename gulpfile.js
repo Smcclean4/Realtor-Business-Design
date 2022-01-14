@@ -43,10 +43,10 @@ function mini() {
 }
 // minifying images
 function images () {
-  return gulp.src('project/images/**/*.+(png | jpg | gif | svg)')
-    .pipe(cache(imagemin({
+  return gulp.src('project/images/*')
+    .pipe(imagemin({
       interlaced: true
-    })))
+    }))
     .pipe(gulp.dest('dist/images'))
 }
 // tasks
